@@ -1,0 +1,108 @@
+@import "../../variables/variables";
+
+.container {
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 31px);
+}
+
+.list {
+  @extend %default-list;
+  padding: 10px 0;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-height: calc(100vh - 100px);
+
+  &__item {
+    cursor: pointer;
+    width: 100%;
+    padding: 4px;
+    display: block;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px -4px rgba(9, 30, 66, .25), 0 0 0 1px rgba(9, 30, 66, .08);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    @extend %default-button;
+    position: relative;
+    width: 9%;
+    margin: 0 8px;
+
+    &:after {
+      content: '';
+      width: 10%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 15px solid transparent;
+      border-right-color: $bg-main-fill;
+      border-left: 0;
+      transition: all .3s ease-in-out;
+    }
+
+    &[disabled]:after {
+      opacity: 0.3;
+    }
+
+    &:last-child:after {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+  }
+
+  &__list {
+    @extend %default-list;
+    //width: 79%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      color: $color-main-blue;
+      transition: all .3s ease-in-out;
+      margin-right: 4px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__currentItem {
+      composes: pagination__list__item;
+      background-color: $bg-main-fill;
+      color: #fff;
+      border: 1px solid transparent;
+    }
+  }
+}

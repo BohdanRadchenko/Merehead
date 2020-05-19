@@ -1,0 +1,32 @@
+@import "../../variables/variables";
+
+.container {
+  padding-right: 30px;
+  position: relative;
+  color: $color-main-blue;
+  width: 100%;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+  margin-bottom: 4px;
+
+  &__title {
+    margin: 0 4px 0 0;
+  }
+}
+
+.desc {
+  width: 100%;
+  margin: 0;
+}
+
+.delete {
+  @extend %default-button;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+}

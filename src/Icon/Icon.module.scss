@@ -1,0 +1,36 @@
+@import "../variables/variables.color";
+
+.container {
+  width: 100%;
+  cursor: pointer;
+
+  &:hover .icon__content {
+    background-color: $bg-secondary-fill-hover;
+  }
+}
+
+.icon {
+  position: relative;
+  height: 0;
+  border: none;
+  padding-top: 100%;
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    background-color: $bg-secondary-fill;
+    border-radius: 5px;
+  }
+}
+
+.pos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

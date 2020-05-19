@@ -1,0 +1,44 @@
+//COLOR
+//bg-color
+$bg-main-blue: #026aa7;
+$bg-secondary-blue: #01509f;
+$bg-main-gray: #f4f5f7;
+
+$bg-main-fill: rgb(0, 121, 191);
+
+$bg-gradient-main : rgba(0, 121, 191, 1);
+$bg-gradient-secondary : rgba(0, 121, 191, .8);
+$bg-gradient-tertiary : rgba(0, 121, 191, .6);
+$bg-gradient-quaternary : rgba(0, 121, 191, .4);
+
+//DISABLED
+$bg-disabled : rgba(9,30,66,.04);
+$color-disabled : #a5adba;
+
+$bg-fill-green: hsl(105, 70%, 41%);;
+$bg-fill-green-secondary: #5aac44;
+
+$bg-secondary-fill: hsla(0,0%,100%,.3);
+$bg-secondary-fill-hover: hsla(0,0%,100%,.2);
+
+$color-main-blue: #172b4d;
+$color-secondary-blue: #5e6c84;
+
+//DEFAULT
+%default-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%default-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+%default-link {
+  text-decoration: none;
+}
+

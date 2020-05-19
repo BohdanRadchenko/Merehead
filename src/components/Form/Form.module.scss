@@ -1,0 +1,80 @@
+@import "../../variables/variables";
+
+.form {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 16px;
+
+  &__title {
+    color: $color-secondary-blue;
+    border-bottom: 1px solid rgba(9,30,66,.13);
+    margin: 0;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__inputWrapper {
+    padding: 4px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    width: 20%;
+    color: $color-main-blue;
+    font-weight: 600;
+  }
+
+  &__input {
+    outline: none;
+    width: 80%;
+    background-color: rgba(250, 251, 252, 0.8);
+    border: 2px solid #dfe1e6;
+    border-radius: 5px;
+    padding: 4px 0 4px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-main-blue;
+
+    &:hover {
+      background-color: #dfe1e6;
+    }
+
+    &:focus {
+      border: 2px solid #0079bf;
+      background-color: transparent;
+    }
+  }
+
+  &__textarea {
+    composes: form__input;
+    resize: none;
+    padding: 8px 10px;
+  }
+
+  &__button {
+    @extend %default-button;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $bg-fill-green;
+    color: #fff;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: $bg-fill-green-secondary;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+
+}

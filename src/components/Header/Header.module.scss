@@ -1,0 +1,55 @@
+@import '../../variables/variables';
+
+.container {
+  width: 100%;
+  background-color: $bg-main-fill;
+  padding: 4px 0;
+}
+
+.header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__nav {
+    width: 30%;
+
+    &__list {
+      @extend %default-list;
+      display: flex;
+      justify-content: space-between;
+
+      &__item {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        &__link {
+          font-size: 18px;
+          color: #fff;
+          text-decoration: none;
+
+          &__active {
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 100%;
+              border: 1px solid #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
