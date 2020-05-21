@@ -26,7 +26,7 @@ const User = ({users, handleUsers, onDelete, handleUpdateUser, modalOpen, modalC
       handleUsers()
     }
     setUser(users.find(el => el.id === Number(userId)))
-  }, [users])
+  }, [users, handleUsers, userId])
 
   const handleDeleteClick = () => {
     onDelete(user.id)

@@ -33,7 +33,6 @@ export const handleUpdateUser = (id, body) => dispatch => {
   dispatch(updateUserRequest());
   return api.users().update(id, body)
       .then(response => {
-        console.log(response.data)
         return dispatch(updateUserSuccess(response.data));
       })
   // .catch(error => dispatch(deleteUserError(error)));

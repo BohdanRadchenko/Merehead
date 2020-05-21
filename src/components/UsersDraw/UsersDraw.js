@@ -4,6 +4,7 @@ import css from './UsersDraw.module.scss'
 
 const UsersDraw = ({id, name, surname, desc, onDelete}) => {
   const {DeleteIcon} = Icon()
+
   const handleClickDelete = () => [
       // onDelete(id)
   ]
