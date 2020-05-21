@@ -25,6 +25,7 @@
 
 .delete {
   @extend %default-button;
+  opacity: 0;
   position: absolute;
   top: 50%;
   right: 4px;
